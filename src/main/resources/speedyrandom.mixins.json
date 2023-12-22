@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.amdyep.speedyrandom.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "SpeedyRandom.refmap.json",
+  "mixins": [
+    "both.MixinMultipleClass",
+    "both.MixinMultipleObj"
+  ],
+  "client": [
+    "client.MixinMultipleClass",
+    "client.MixinMultipleObj"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
