@@ -5,12 +5,17 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "SpeedyRandom.refmap.json",
   "mixins": [
-    "both.MixinMultipleClasses",
-    "both.MixinMultipleObjs"
+    "both.MixinMultipleClassesSeedable",
+    "both.MixinMultipleClassesSeedless",
+    "both.MixinMultipleObjsSeedable",
+    "both.MixinMultipleObjsSeedless"
   ],
   "client": [
-    "client.MixinMultipleClasses",
-    "client.MixinMultipleObjs"
+    "client.general.MixinMultipleClassesSeedless",
+    "client.general.MixinMultipleObjsSeedable",
+    "client.general.MixinMultipleObjsSeedless",
+    "client.specific.renderer.entity.MixinLightningBoltRenderer",
+    "client.specific.world.MixinClientWorld"
   ],
   "injectors": {
     "defaultRequire": 1
