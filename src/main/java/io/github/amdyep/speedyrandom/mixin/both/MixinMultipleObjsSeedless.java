@@ -17,7 +17,7 @@ import java.util.Random;
         WanderingTraderSpawner.class, WeightedList.class
 })
 public class MixinMultipleObjsSeedless {
-    @Redirect(method = "<init>*", at = @At(value = "NEW", target = "()Ljava/util/Random;"))
+    @Redirect(method = "<init>*", at = @At(value = "NEW", target = "()Ljava/util/Random;", remap = false))
     private Random speedyrandom$redirect$objInit() {
         return new SpeedyRandomSeedless();
     }

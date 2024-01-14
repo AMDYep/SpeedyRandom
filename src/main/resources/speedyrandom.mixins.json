@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "io.github.amdyep.speedyrandom.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "SpeedyRandom.refmap.json",
+  "refmap": "speedyrandom.refmap.json",
   "mixins": [
     "both.MixinMultipleClassesSeedable",
     "both.MixinMultipleClassesSeedless",

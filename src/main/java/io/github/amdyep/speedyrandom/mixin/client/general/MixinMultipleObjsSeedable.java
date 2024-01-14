@@ -10,7 +10,7 @@ import java.util.Random;
 
 @Mixin({Particle.class})
 public class MixinMultipleObjsSeedable {
-    @Redirect(method = "<init>*", at = @At(value = "NEW", target = "()Ljava/util/Random;"))
+    @Redirect(method = "<init>*", at = @At(value = "NEW", target = "()Ljava/util/Random;", remap = false))
     private Random speedyrandom$redirect$objInit() {
         return new SpeedyRandomSeedable();
     }

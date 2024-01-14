@@ -19,7 +19,7 @@ public abstract class MixinClientWorld extends World {
         super(p1, p2, p3, p4, p5, p6, p7);
     }
 
-    @Redirect(method = "animateTick", at = @At(value = "NEW", target = "()Ljava/util/Random;"))
+    @Redirect(method = "animateTick", at = @At(value = "NEW", target = "()Ljava/util/Random;", remap = false))
     private Random speedyrandom$animateTick() {
         return random;
     }
