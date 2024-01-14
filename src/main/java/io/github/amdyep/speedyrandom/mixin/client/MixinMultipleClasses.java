@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.Random;
 
 @Mixin({Font.class, SpellParticle.class, Splashes.class})
-public class MixinMultipleClass {
+public class MixinMultipleClasses {
     @Redirect(method = "<clinit>", at = @At(value = "NEW", target = "()Ljava/util/Random;", remap = false))
     private static Random speedyrandom$redirect$clzInit() {
         return new SpeedyRandom();

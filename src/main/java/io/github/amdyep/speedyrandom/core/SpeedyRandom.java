@@ -13,7 +13,7 @@ public class SpeedyRandom extends Random {
     }
 
     @Override
-    public void setSeed(long seed) {
+    public synchronized void setSeed(long seed) {
         if (this.seededRandom == null) this.seededRandom = new Random(seed);
         else this.seededRandom.setSeed(seed);
         this.hasSeed = true;

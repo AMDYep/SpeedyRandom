@@ -20,7 +20,7 @@ import java.util.Random;
         MinecraftServer.class, Raid.class,
         WanderingTraderSpawner.class, WeightedList.class, World.class
 })
-public class MixinMultipleObj {
+public class MixinMultipleObjs {
     @Redirect(method = "<init>*", at = @At(value = "NEW", target = "()Ljava/util/Random;"))
     private Random speedyrandom$redirect$objInit() {
         return new SpeedyRandom();

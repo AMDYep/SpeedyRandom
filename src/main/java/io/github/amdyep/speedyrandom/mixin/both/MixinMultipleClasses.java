@@ -20,7 +20,7 @@ import java.util.Random;
         InventoryHelper.class, Item.class, MathHelper.class,
         Sensor.class, ServerLoginNetHandler.class, ZombieProfToType.class
 })
-public class MixinMultipleClass {
+public class MixinMultipleClasses {
     @Redirect(method = "<clinit>", at = @At(value = "NEW", target = "()Ljava/util/Random;", remap = false))
     private static Random speedyrandom$redirect$clzInit() {
         return new SpeedyRandom();

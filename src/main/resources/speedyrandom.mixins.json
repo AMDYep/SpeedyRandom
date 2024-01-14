@@ -5,12 +5,12 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "SpeedyRandom.refmap.json",
   "mixins": [
-    "both.MixinMultipleClass",
-    "both.MixinMultipleObj"
+    "both.MixinMultipleClasses",
+    "both.MixinMultipleObjs"
   ],
   "client": [
-    "client.MixinMultipleClass",
-    "client.MixinMultipleObj"
+    "client.MixinMultipleClasses",
+    "client.MixinMultipleObjs"
   ],
   "injectors": {
     "defaultRequire": 1
